@@ -1,0 +1,25 @@
+# 스프링 부트 2.4 이전에는 default 영역으로 인식되었지만,
+# 스프링 부트 2.4 부터는 제일 마지막 정의된 내용으로 덮어씌워진다.
+honeymon:
+  nick-name: Honeymon
+
+---
+spring.config.activate.on-profile: develop
+honeymon:
+  nick-name: Developer Honeymon
+
+---
+spring.config.activate.on-profile: honeymon-develop
+honeymon:
+  nick-name: Developer Honeymon
+
+---
+# 프로파일 문서의 순서도 중요하군. +_+)
+spring.config.activate.on-profile: beta
+honeymon:
+  nick-name: Beta tester Honeymon 1
+
+---
+spring.config.activate.on-profile: honeymon-beta
+honeymon:
+  nick-name: Beta tester Honeymon

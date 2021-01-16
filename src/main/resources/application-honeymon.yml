@@ -1,0 +1,13 @@
+#2.4 이전방식
+honeymon:
+  root-uri: http://honeymon.io
+
+---
+spring.profiles: develop
+honeymon:
+  root-uri: http://honeymon.develop.io
+
+---
+spring.profiles: beta
+honeymon:
+  root-uri: http://honeymon.beta.io

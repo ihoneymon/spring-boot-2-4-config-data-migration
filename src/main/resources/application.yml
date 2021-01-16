@@ -1,0 +1,20 @@
+spring:
+  config:
+    import: classpath:honeymon.yml, classpath:missing-on-profile.yml
+  profiles:
+    include:
+      - honeymon
+    group:
+      develop: honeymon-develop
+      beta: honeymon-beta
+
+
+---
+app.name: Spring Config Data Migration guide
+
+---
+app.name: Override Spring Config Data Migration guide
+
+---
+### 프로파일 선언 없이 사용하는 상황이 벌어지지 않길 바란다!!
+app.name: Override Override Spring Config Data Migration guide

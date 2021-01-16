@@ -1,0 +1,10 @@
+app.duration-field: 5s
+
+---
+spring.config.activate.on-profile: filter
+app.duration-field: 5m
+
+---
+#이렇게 해놓으면 위에 spring.config.activate.on-profile 선언도 안통한다. @_@);;;
+#spring.config.activate.on-profile: filter-second
+app.duration-field: 5h
