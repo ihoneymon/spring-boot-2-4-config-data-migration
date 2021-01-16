@@ -48,7 +48,7 @@ spring.config:
 
 ## 스프링 부트 2.4 이전
 
-YAML 에서는 구분자(`—-`)를 이용해서 문서를 구분짓는다. 파일 하나에서 구분자(—-)를 이용해서 문서를 여러 문서를 작성할 수 있다. 스프링 부트에서는 이를 활용하여 `spring.profiles: {profile}`: 로 활성화되는 **프로파일**에 맞춰 애플리케이션 속성 정의문서를 작성할 수 있도록 했다.
+YAML 에서는 구분자(`---`)를 이용해서 문서를 구분짓는다. 파일 하나에서 구분자(—-)를 이용해서 문서를 여러 문서를 작성할 수 있다. 스프링 부트에서는 이를 활용하여 `spring.profiles: {profile}`: 로 활성화되는 **프로파일**에 맞춰 애플리케이션 속성 정의문서를 작성할 수 있도록 했다.
 
 스프링 부트 2.3.에서는 이 프로파일 선언선수에 따라 정의속성에 대한 덮어쓰기를 수행했다.
 
@@ -60,7 +60,7 @@ YAML 에서는 구분자(`—-`)를 이용해서 문서를 구분짓는다. 파�
 
 ### Java properites file(`*.properties`) YAML 과 유사한 문서구분자 지원
 
-Java properties 파일에서도 YAML 에서 문서를 구분짓는 구분자(`—-`)와 유사한 구분자(`#—-`) 를 이용할 수 있다.
+Java properties 파일에서도 YAML 에서 문서를 구분짓는 구분자(`---`)와 유사한 구분자(`#---`) 를 이용할 수 있다.
 
 ```
 test=value
@@ -112,7 +112,7 @@ spring.profiles:
 
 ### 이제 `spring.config.activate.on-profile` 을 사용하자!!
 
-스프링 부트 2.4 부터는 YAML 파일 하나에 구분자(`—-`)로 문서를 나누고 `spring.profies` 로 구분짓는 문서작성방식이 더이상 유효하지 않다(`spring.profiles` deprecated).
+스프링 부트 2.4 부터는 YAML 파일 하나에 구분자(`---`)로 문서를 나누고 `spring.profies` 로 구분짓는 문서작성방식이 더이상 유효하지 않다(`spring.profiles` deprecated).
 
 `honeymon.yml`
 
@@ -163,7 +163,7 @@ class HoneymonPropertiesTest {
 }
 ```
 
-스프링 부트 2.4 이전에는, 프로파일을 선언하지 않으면 `application.yml` 을 비롯해서 `default` 프로파일(YAML 파일 구분자(`—-`) 로 구분되는 첫번째 문서)을 사용했다. 그러나 스프링 부트 2.4 에서는 제일 마지막 문서로 덮어쓰써 버린다.
+스프링 부트 2.4 이전에는, 프로파일을 선언하지 않으면 `application.yml` 을 비롯해서 `default` 프로파일(YAML 파일 구분자(`---`) 로 구분되는 첫번째 문서)을 사용했다. 그러나 스프링 부트 2.4 에서는 제일 마지막 문서로 덮어쓰써 버린다.
 
 위에서 `[spring.profies.group](http://spring.profies.group)` 을 이용해서 **그룹프로파일(`spring.profiles.group.{group-name}`)**을 선언하면 내가 의도했던 대로 속성값을 덮어쓴다.
 
